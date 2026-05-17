@@ -22,11 +22,11 @@ window.onload = function() {
     // i uruchamiamy tylko to co potrzebne na danej stronie
     var url = window.location.href;
 
-    if (url.indexOf("kontakt.html") !== -1) {
+    if (url.indexOf("contact.html") !== -1) {
         inicjalizujKontakt();
-    } else if (url.indexOf("formularz.html") !== -1) {
+    } else if (url.indexOf("form.html") !== -1) {
         inicjalizujFormularz();
-    } else if (url.indexOf("galeria.html") !== -1) {
+    } else if (url.indexOf("gallery.html") !== -1) {
         inicjalizujGalerie();
     } else {
         // jesli zadne z powyzszych to jestesmy na stronie glownej
