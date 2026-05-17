@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria — Virella School</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ===== NAWIGACJA ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html"><span class="logo-v">V</span>irella <span class="logo-school">School</span></a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Strona główna</a></li>
+                <li><a href="gallery.html" class="active">Galeria</a></li>
+                <li><a href="form.html">Zapisz dziecko</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+                <li class="nav-divider"></li>
+                <li><a href="https://www.cambridgeenglish.org" target="_blank" class="nav-external"><i class="fas fa-external-link-alt"></i> Cambridge</a></li>
+                <li><a href="https://www.britishcouncil.org" target="_blank" class="nav-external"><i class="fas fa-external-link-alt"></i> British Council</a></li>
+                <li><a href="https://www.duolingo.com" target="_blank" class="nav-external"><i class="fas fa-external-link-alt"></i> Duolingo</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ===== PAGE HERO ===== -->
+    <div class="page-hero">
+        <div class="page-hero-bg">
+            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1600&q=80" alt="Galeria">
+            <div class="page-hero-overlay"></div>
+        </div>
+        <div class="page-hero-content">
+            <span class="section-label section-label-gold">Virella School</span>
+            <h1>Galeria</h1>
+            <p>Zajrzyj do naszych sal, poznaj atmosferę i ludzi Virella School.</p>
+        </div>
+    </div>
+
+    <!-- ===== FILTRY GALERII ===== -->
+    <div class="section section-light" id="galeria-filtry">
+        <div class="container">
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">Wszystkie</button>
+                <button class="filter-btn" data-filter="klasy">Sale lekcyjne</button>
+                <button class="filter-btn" data-filter="uczniowie">Uczniowie</button>
+                <button class="filter-btn" data-filter="ksiazki">Książki & materiały</button>
+                <button class="filter-btn" data-filter="certyfikaty">Certyfikaty</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SIATKA GALERII ===== -->
+    <div class="section section-light" id="galeria-grid" style="padding-top:0;">
+        <div class="container">
+            <div class="gallery-grid" id="galleryGrid">
+
+                <div class="gallery-item" data-category="klasy" data-index="0">
+                    <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&q=80" alt="Nowoczesna sala lekcyjna">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-content">
+                            <i class="fas fa-search-plus"></i>
+                            <span>Nowoczesna sala lekcyjna</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item gallery-item-wide" data-category="uczniowie" data-index="1">
+                    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&q=80" alt="Dzieci podczas lekcji">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-content">
+                            <i class="fas fa-search-plus"></i>
+                            <span>Dzieci podczas lekcji angielskiego</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="ksiazki" data-index="2">
+                    <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=800&q=80" alt="Biblioteka szkolna">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-content">
+                            <i class="fas fa-search-plus"></i>
+                            <span>Bogata biblioteka anglojęzyczna</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="uczniowie" data-index="3">
+                    <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=800&q=80" alt="Nauka przez zabawę">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-content">
+                            <i class="fas fa-search-plus"></i>
+                            <span>Nauka przez zabawę i odkrywanie</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item gallery-item-tall" data-category="klasy" data-index="4">
+                    <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=800&q=80" alt="Eleganckie wnętrze">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-content">
+                            <i class="fas fa-search-plus"></i>
+                            <span>Eleganckie przestrzenie wspólne</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="certyfikaty" data-index="5">
+                    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&q=80" alt="Certyfikaty Cambridge">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-content">
+                            <i class="fas fa-search-plus"></i>
+                            <span>Ceremonia wręczenia certyfikatów Cambridge</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="ksiazki" data-index="6">
+                    <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=800&q=80" alt="Materiały dydaktyczne">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-content">
+                            <i class="fas fa-search-plus"></i>
+                            <span>Autorskie materiały dydaktyczne</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item gallery-item-wide" data-category="klasy" data-index="7">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80" alt="Sala konferencyjna">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-content">
+                            <i class="fas fa-search-plus"></i>
+                            <span>Sala do egzaminów i prezentacji</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="uczniowie" data-index="8">
+                    <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=800&q=80" alt="Praca w parach">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-content">
+                            <i class="fas fa-search-plus"></i>
+                            <span>Praca w małych grupach</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="certyfikaty" data-index="9">
+                    <img src="https://images.unsplash.com/photo-1564981797816-1043664bf78d?w=800&q=80" alt="Nagrody i wyróżnienia">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-content">
+                            <i class="fas fa-search-plus"></i>
+                            <span>Nagrody i wyróżnienia szkoły</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="ksiazki" data-index="10">
+                    <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&q=80" alt="Globusy i atlasy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-content">
+                            <i class="fas fa-search-plus"></i>
+                            <span>Globusy i atlasy językowe</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="uczniowie" data-index="11">
+                    <img src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=800&q=80" alt="Lekcja z native speakerem">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-content">
+                            <i class="fas fa-search-plus"></i>
+                            <span>Lekcja z native speakerem</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="gallery-load-more">
+                <button class="btn btn-outline-dark" id="loadMoreBtn">
+                    <i class="fas fa-images"></i> Załaduj więcej zdjęć
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== LIGHTBOX MODAL ===== -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-overlay" id="lightboxOverlay"></div>
+        <div class="lightbox-container">
+            <button class="lightbox-close" id="lightboxClose"><i class="fas fa-times"></i></button>
+            <button class="lightbox-prev" id="lightboxPrev"><i class="fas fa-chevron-left"></i></button>
+            <div class="lightbox-img-wrapper">
+                <img src="" alt="" id="lightboxImg">
+                <div class="lightbox-caption" id="lightboxCaption"></div>
+            </div>
+            <button class="lightbox-next" id="lightboxNext"><i class="fas fa-chevron-right"></i></button>
+            <div class="lightbox-counter" id="lightboxCounter"></div>
+        </div>
+    </div>
+
+    <!-- ===== CTA ===== -->
+    <div class="section section-dark" id="galeria-cta">
+        <div class="container" style="text-align:center;">
+            <div class="section-header section-header-light">
+                <span class="section-label section-label-gold">Dołącz do nas</span>
+                <h2 class="section-title section-title-light">Twoje dziecko może tu być</h2>
+                <p class="section-desc section-desc-light">Zapisz dziecko do Virella School i daj mu start, który zmieni jego przyszłość.</p>
+            </div>
+            <a href="form.html" class="btn btn-gold btn-lg">Zapisz dziecko</a>
+        </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer" id="footer">
+        <div class="footer-top">
+            <div class="container footer-grid">
+                <div class="footer-col footer-brand">
+                    <div class="footer-logo"><span class="logo-v">V</span>irella <span class="logo-school">School</span></div>
+                    <p>Ekskluzywna szkoła językowa dla dzieci i młodzieży. Prestiż, jakość, rezultaty.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Nawigacja</h4>
+                    <ul>
+                        <li><a href="index.html">Strona główna</a></li>
+                        <li><a href="gallery.html">Galeria</a></li>
+                        <li><a href="form.html">Zapisz dziecko</a></li>
+                        <li><a href="contact.html">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Partnerzy</h4>
+                    <ul>
+                        <li><a href="https://www.cambridgeenglish.org" target="_blank">Cambridge English</a></li>
+                        <li><a href="https://www.britishcouncil.org" target="_blank">British Council</a></li>
+                        <li><a href="https://www.duolingo.com" target="_blank">Duolingo</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Kontakt</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> ul. Złota 12, 00-001 Warszawa</li>
+                        <li><i class="fas fa-phone"></i> +48 22 123 45 67</li>
+                        <li><i class="fas fa-envelope"></i> hello@virellaschool.pl</li>
+                        <li><i class="fas fa-clock"></i> Pon–Pt: 8:00–20:00</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 Virella School. Wszelkie prawa zastrzeżone.</p>
+                <p>Projekt edukacyjny — strona demonstracyjna</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

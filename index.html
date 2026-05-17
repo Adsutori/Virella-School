@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virella School — Where Excellence Meets Language</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ===== NAWIGACJA ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-v">V</span>irella <span class="logo-school">School</span>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">Strona główna</a></li>
+                <li><a href="gallery.html">Galeria</a></li>
+                <li><a href="form.html">Zapisz dziecko</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+                <li class="nav-divider"></li>
+                <li><a href="https://www.cambridgeenglish.org" target="_blank" class="nav-external"><i class="fas fa-external-link-alt"></i> Cambridge</a></li>
+                <li><a href="https://www.britishcouncil.org" target="_blank" class="nav-external"><i class="fas fa-external-link-alt"></i> British Council</a></li>
+                <li><a href="https://www.duolingo.com" target="_blank" class="nav-external"><i class="fas fa-external-link-alt"></i> Duolingo</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ===== HERO SECTION ===== -->
+    <div class="hero" id="hero">
+        <div class="hero-bg">
+            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1600&q=80" alt="Virella School" class="hero-img">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">Certyfikowana szkoła Cambridge & British Council</div>
+            <h1 class="hero-title">
+                <span class="hero-title-main">Virella</span>
+                <span class="hero-title-sub">School</span>
+            </h1>
+            <p class="hero-tagline" id="typingText"></p>
+            <p class="hero-desc">Ekskluzywna nauka języków dla dzieci i młodzieży w wieku 4–18 lat.<br>Małe grupy, native speakerzy, certyfikowane programy.</p>
+            <div class="hero-buttons">
+                <a href="form.html" class="btn btn-gold">Zapisz dziecko</a>
+                <a href="#oferta" class="btn btn-outline" id="scrollOferta">Poznaj ofertę</a>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <span></span>
+        </div>
+    </div>
+
+    <!-- ===== O NAS ===== -->
+    <div class="section section-light" id="onas">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">O nas</span>
+                <h2 class="section-title">Prestiż, który otwiera drzwi</h2>
+                <p class="section-desc">Virella School to więcej niż szkoła językowa — to środowisko, w którym dzieci rozwijają się w atmosferze elegancji, szacunku i intelektualnej ciekawości.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon"><i class="fas fa-users"></i></div>
+                    <h3>Małe grupy</h3>
+                    <p>Maksymalnie 6 uczniów w grupie. Każde dziecko otrzymuje pełną uwagę nauczyciela i indywidualne podejście.</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon"><i class="fas fa-globe"></i></div>
+                    <h3>Native speakerzy</h3>
+                    <p>Wszyscy nasi lektorzy to native speakerzy z certyfikatami CELTA/DELTA i wieloletnim doświadczeniem pedagogicznym.</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon"><i class="fas fa-award"></i></div>
+                    <h3>Certyfikaty Cambridge</h3>
+                    <p>Przygotowujemy do egzaminów Cambridge English, Alliance Française i innych uznanych certyfikatów międzynarodowych.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== OFERTA — JĘZYKI ===== -->
+    <div class="section section-dark" id="oferta">
+        <div class="container">
+            <div class="section-header section-header-light">
+                <span class="section-label section-label-gold">Oferta</span>
+                <h2 class="section-title section-title-light">Języki, które otwierają świat</h2>
+                <p class="section-desc section-desc-light">Wybierz język, który stanie się przepustką Twojego dziecka do globalnego sukcesu.</p>
+            </div>
+            <div class="languages-grid">
+                <div class="lang-card animate-on-scroll">
+                    <div class="lang-flag">🇬🇧</div>
+                    <h3>Angielski</h3>
+                    <p class="lang-level">Pre-A1 → C2</p>
+                    <p class="lang-desc">Przygotowanie do egzaminów Cambridge: KET, PET, FCE, CAE, CPE. Program British Council.</p>
+                    <div class="lang-price">od <span>480 zł</span>/mies.</div>
+                    <a href="form.html" class="btn btn-gold btn-sm">Zapisz się</a>
+                </div>
+                <div class="lang-card lang-card-featured animate-on-scroll">
+                    <div class="lang-badge">Najpopularniejszy</div>
+                    <div class="lang-flag">🇫🇷</div>
+                    <h3>Francuski</h3>
+                    <p class="lang-level">A1 → C1</p>
+                    <p class="lang-desc">Certyfikowany program Alliance Française. DELF/DALF. Język dyplomacji i kultury.</p>
+                    <div class="lang-price">od <span>520 zł</span>/mies.</div>
+                    <a href="form.html" class="btn btn-gold btn-sm">Zapisz się</a>
+                </div>
+                <div class="lang-card animate-on-scroll">
+                    <div class="lang-flag">🇪🇸</div>
+                    <h3>Hiszpański</h3>
+                    <p class="lang-level">A1 → B2</p>
+                    <p class="lang-desc">Drugi język świata. Przygotowanie do egzaminów DELE. Kultura i literatura hispanoamerykańska.</p>
+                    <div class="lang-price">od <span>460 zł</span>/mies.</div>
+                    <a href="form.html" class="btn btn-gold btn-sm">Zapisz się</a>
+                </div>
+                <div class="lang-card animate-on-scroll">
+                    <div class="lang-flag">🇨🇳</div>
+                    <h3>Mandaryński</h3>
+                    <p class="lang-level">HSK 1 → HSK 4</p>
+                    <p class="lang-desc">Język przyszłości. Pismo, tony, kultura. Przygotowanie do egzaminów HSK. Dla ambitnych!</p>
+                    <div class="lang-price">od <span>580 zł</span>/mies.</div>
+                    <a href="form.html" class="btn btn-gold btn-sm">Zapisz się</a>
+                </div>
+                <div class="lang-card animate-on-scroll">
+                    <div class="lang-flag">🇩🇪</div>
+                    <h3>Niemiecki</h3>
+                    <p class="lang-level">A1 → C1</p>
+                    <p class="lang-desc">Język nauki i biznesu. Przygotowanie do Goethe-Zertifikat i TestDaF. Precyzja i elegancja.</p>
+                    <div class="lang-price">od <span>460 zł</span>/mies.</div>
+                    <a href="form.html" class="btn btn-gold btn-sm">Zapisz się</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== STATYSTYKI ===== -->
+    <div class="section section-gold" id="statystyki">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number" id="stat-uczniowie">0</div>
+                    <div class="stat-label">Zadowolonych uczniów</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="stat-lata">0</div>
+                    <div class="stat-label">Lat doświadczenia</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="stat-jezyki">0</div>
+                    <div class="stat-label">Języków w ofercie</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="stat-certyfikaty">0</div>
+                    <div class="stat-label">Zdobytych certyfikatów</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SLIDER ZDJĘĆ ===== -->
+    <div class="section section-light" id="slider-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Nasze wnętrza</span>
+                <h2 class="section-title">Przestrzeń stworzona do nauki</h2>
+            </div>
+            <div class="slider-wrapper">
+                <div class="slider-container" id="sliderContainer">
+                    <div class="slide active">
+                        <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=1200&q=80" alt="Klasa Virella School">
+                        <div class="slide-caption">Nowoczesne sale lekcyjne</div>
+                    </div>
+                    <div class="slide">
+                        <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=1200&q=80" alt="Biblioteka">
+                        <div class="slide-caption">Bogata biblioteka anglojęzyczna</div>
+                    </div>
+                    <div class="slide">
+                        <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=1200&q=80" alt="Dzieci uczące się">
+                        <div class="slide-caption">Indywidualne podejście do każdego ucznia</div>
+                    </div>
+                    <div class="slide">
+                        <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=1200&q=80" alt="Nauka języków">
+                        <div class="slide-caption">Nauka przez zabawę i odkrywanie</div>
+                    </div>
+                    <div class="slide">
+                        <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=1200&q=80" alt="Eleganckie wnętrze">
+                        <div class="slide-caption">Eleganckie przestrzenie wspólne</div>
+                    </div>
+                </div>
+                <button class="slider-btn slider-prev" id="sliderPrev"><i class="fas fa-chevron-left"></i></button>
+                <button class="slider-btn slider-next" id="sliderNext"><i class="fas fa-chevron-right"></i></button>
+                <div class="slider-dots" id="sliderDots"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== OPINIE RODZICÓW ===== -->
+    <div class="section section-dark" id="opinie">
+        <div class="container">
+            <div class="section-header section-header-light">
+                <span class="section-label section-label-gold">Opinie</span>
+                <h2 class="section-title section-title-light">Co mówią rodzice</h2>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonial active" id="testimonial-0">
+                    <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+                    <p class="testimonial-text">"Virella School to absolutnie wyjątkowe miejsce. Moja córka w ciągu roku osiągnęła poziom B2 z angielskiego. Nauczyciele są niesamowici, a atmosfera w szkole sprawia, że dzieci chcą się uczyć."</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80" alt="Anna K.">
+                        <div>
+                            <strong>Anna Kowalska</strong>
+                            <span>Mama Zosi, 12 lat</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial" id="testimonial-1">
+                    <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+                    <p class="testimonial-text">"Zdecydowaliśmy się na mandaryński dla naszego syna — wszyscy mówili, że to szaleństwo. Po 2 latach Michał zdał HSK 3. Virella School udowodniła, że nie ma niemożliwych wyzwań."</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80" alt="Piotr N.">
+                        <div>
+                            <strong>Piotr Nowak</strong>
+                            <span>Tata Michała, 14 lat</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial" id="testimonial-2">
+                    <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+                    <p class="testimonial-text">"Prestiż tej szkoły jest nieporównywalny. Moje dzieci uczą się tu angielskiego i francuskiego. Certyfikaty Cambridge, które zdobyły, otworzyły im drzwi do najlepszych szkół w Europie."</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80" alt="Magdalena W.">
+                        <div>
+                            <strong>Magdalena Wiśniewska</strong>
+                            <span>Mama Julii i Marka</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-nav">
+                <button class="testimonial-dot active" onclick="pokazOpinie(0)"></button>
+                <button class="testimonial-dot" onclick="pokazOpinie(1)"></button>
+                <button class="testimonial-dot" onclick="pokazOpinie(2)"></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== CTA BANNER ===== -->
+    <div class="section cta-banner" id="cta">
+        <div class="cta-bg">
+            <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?w=1600&q=80" alt="CTA">
+            <div class="cta-overlay"></div>
+        </div>
+        <div class="container cta-content">
+            <h2>Daj swojemu dziecku przewagę na całe życie</h2>
+            <p>Rekrutacja na rok szkolny 2025/2026 trwa. Liczba miejsc jest ograniczona.</p>
+            <a href="form.html" class="btn btn-gold btn-lg">Zapisz dziecko już dziś</a>
+        </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer" id="footer">
+        <div class="footer-top">
+            <div class="container footer-grid">
+                <div class="footer-col footer-brand">
+                    <div class="footer-logo"><span class="logo-v">V</span>irella <span class="logo-school">School</span></div>
+                    <p>Ekskluzywna szkoła językowa dla dzieci i młodzieży. Prestiż, jakość, rezultaty.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Nawigacja</h4>
+                    <ul>
+                        <li><a href="index.html">Strona główna</a></li>
+                        <li><a href="galeria.html">Galeria</a></li>
+                        <li><a href="form.html">Zapisz dziecko</a></li>
+                        <li><a href="contact.html">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Partnerzy</h4>
+                    <ul>
+                        <li><a href="https://www.cambridgeenglish.org" target="_blank">Cambridge English</a></li>
+                        <li><a href="https://www.britishcouncil.org" target="_blank">British Council</a></li>
+                        <li><a href="https://www.duolingo.com" target="_blank">Duolingo</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Kontakt</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> ul. Złota 12, 00-001 Warszawa</li>
+                        <li><i class="fas fa-phone"></i> +48 22 123 45 67</li>
+                        <li><i class="fas fa-envelope"></i> hello@virellaschool.pl</li>
+                        <li><i class="fas fa-clock"></i> Pon–Pt: 8:00–20:00</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 Virella School. Wszelkie prawa zastrzeżone.</p>
+                <p>Projekt edukacyjny — strona demonstracyjna</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

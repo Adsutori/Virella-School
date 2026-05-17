@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zapisz dziecko — Virella School</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ===== NAWIGACJA ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html"><span class="logo-v">V</span>irella <span class="logo-school">School</span></a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Strona główna</a></li>
+                <li><a href="gallery.html">Galeria</a></li>
+                <li><a href="form.html" class="active">Zapisz dziecko</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+                <li class="nav-divider"></li>
+                <li><a href="https://www.cambridgeenglish.org" target="_blank" class="nav-external"><i class="fas fa-external-link-alt"></i> Cambridge</a></li>
+                <li><a href="https://www.britishcouncil.org" target="_blank" class="nav-external"><i class="fas fa-external-link-alt"></i> British Council</a></li>
+                <li><a href="https://www.duolingo.com" target="_blank" class="nav-external"><i class="fas fa-external-link-alt"></i> Duolingo</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ===== PAGE HERO ===== -->
+    <div class="page-hero">
+        <div class="page-hero-bg">
+            <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=1600&q=80" alt="Formularz zapisu">
+            <div class="page-hero-overlay"></div>
+        </div>
+        <div class="page-hero-content">
+            <span class="section-label section-label-gold">Rekrutacja 2025/2026</span>
+            <h1>Zapisz swoje dziecko</h1>
+            <p>Wypełnij formularz — skontaktujemy się w ciągu 24 godzin.</p>
+        </div>
+    </div>
+
+    <!-- ===== FORMULARZ ===== -->
+    <div class="section section-light" id="formularz-section">
+        <div class="container">
+            <div class="form-layout">
+
+                <!-- Sidebar z info -->
+                <div class="form-sidebar">
+                    <div class="form-sidebar-card">
+                        <h3><i class="fas fa-star"></i> Dlaczego Virella?</h3>
+                        <ul class="sidebar-list">
+                            <li><i class="fas fa-check"></i> Maks. 6 uczniów w grupie</li>
+                            <li><i class="fas fa-check"></i> Native speakerzy</li>
+                            <li><i class="fas fa-check"></i> Certyfikaty Cambridge</li>
+                            <li><i class="fas fa-check"></i> Elastyczne godziny</li>
+                            <li><i class="fas fa-check"></i> Bezpłatna lekcja próbna</li>
+                        </ul>
+                    </div>
+                    <div class="form-sidebar-card form-sidebar-contact">
+                        <h3><i class="fas fa-phone-alt"></i> Masz pytania?</h3>
+                        <p>Zadzwoń do nas:</p>
+                        <a href="tel:+48221234567" class="sidebar-phone">+48 22 123 45 67</a>
+                        <p>lub napisz:</p>
+                        <a href="mailto:rekrutacja@virellaschool.pl" class="sidebar-email">rekrutacja@virellaschool.pl</a>
+                    </div>
+                    <!-- Podglad danych z localStorage -->
+                    <div class="form-sidebar-card" id="savedDataCard" style="display:none;">
+                        <h3><i class="fas fa-save"></i> Zapisane dane</h3>
+                        <p id="savedDataInfo"></p>
+                        <button class="btn btn-sm btn-outline-dark" onclick="wyczyscZapisane()">Wyczyść</button>
+                    </div>
+                </div>
+
+                <!-- Formularz główny -->
+                <div class="form-main">
+                    <div class="form-progress">
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" id="progressBar"></div>
+                        </div>
+                        <span class="progress-text" id="progressText">Uzupełnij formularz</span>
+                    </div>
+
+                    <form id="zapiszForm" novalidate>
+
+                        <!-- Sekcja 1: Dane dziecka -->
+                        <div class="form-section-block" id="sekcja-dziecko">
+                            <div class="form-section-title">
+                                <span class="form-section-num">01</span>
+                                <h3>Dane dziecka</h3>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="imieDziecka">Imię dziecka <span class="required">*</span></label>
+                                    <input type="text" id="imieDziecka" name="imieDziecka" placeholder="np. Zofia" oninput="walidujPole(this)" autocomplete="off">
+                                    <span class="field-error" id="err-imieDziecka"></span>
+                                    <span class="field-ok" id="ok-imieDziecka"><i class="fas fa-check"></i></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="nazwiskoDziecka">Nazwisko dziecka <span class="required">*</span></label>
+                                    <input type="text" id="nazwiskoDziecka" name="nazwiskoDziecka" placeholder="np. Kowalska" oninput="walidujPole(this)" autocomplete="off">
+                                    <span class="field-error" id="err-nazwiskoDziecka"></span>
+                                    <span class="field-ok" id="ok-nazwiskoDziecka"><i class="fas fa-check"></i></span>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="wiekDziecka">Wiek dziecka <span class="required">*</span></label>
+                                    <select id="wiekDziecka" name="wiekDziecka" onchange="walidujPole(this)">
+                                        <option value="">-- Wybierz wiek --</option>
+                                        <option value="4">4 lata</option>
+                                        <option value="5">5 lat</option>
+                                        <option value="6">6 lat</option>
+                                        <option value="7">7 lat</option>
+                                        <option value="8">8 lat</option>
+                                        <option value="9">9 lat</option>
+                                        <option value="10">10 lat</option>
+                                        <option value="11">11 lat</option>
+                                        <option value="12">12 lat</option>
+                                        <option value="13">13 lat</option>
+                                        <option value="14">14 lat</option>
+                                        <option value="15">15 lat</option>
+                                        <option value="16">16 lat</option>
+                                        <option value="17">17 lat</option>
+                                        <option value="18">18 lat</option>
+                                    </select>
+                                    <span class="field-error" id="err-wiekDziecka"></span>
+                                    <span class="field-ok" id="ok-wiekDziecka"><i class="fas fa-check"></i></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="klasaDziecka">Klasa / etap edukacji</label>
+                                    <select id="klasaDziecka" name="klasaDziecka">
+                                        <option value="">-- Wybierz --</option>
+                                        <option value="przedszkole">Przedszkole</option>
+                                        <option value="sp1-3">Szkoła podstawowa kl. 1-3</option>
+                                        <option value="sp4-6">Szkoła podstawowa kl. 4-6</option>
+                                        <option value="sp7-8">Szkoła podstawowa kl. 7-8</option>
+                                        <option value="liceum">Liceum / Technikum</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sekcja 2: Wybór kursu -->
+                        <div class="form-section-block" id="sekcja-kurs">
+                            <div class="form-section-title">
+                                <span class="form-section-num">02</span>
+                                <h3>Wybór kursu</h3>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="jezyk">Język <span class="required">*</span></label>
+                                    <select id="jezyk" name="jezyk" onchange="walidujPole(this); aktualizujPoziomy()">
+                                        <option value="">-- Wybierz język --</option>
+                                        <option value="angielski">🇬🇧 Angielski</option>
+                                        <option value="francuski">🇫🇷 Francuski</option>
+                                        <option value="hiszpanski">🇪🇸 Hiszpański</option>
+                                        <option value="mandarynski">🇨🇳 Mandaryński</option>
+                                        <option value="niemiecki">🇩🇪 Niemiecki</option>
+                                    </select>
+                                    <span class="field-error" id="err-jezyk"></span>
+                                    <span class="field-ok" id="ok-jezyk"><i class="fas fa-check"></i></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="poziom">Poziom zaawansowania <span class="required">*</span></label>
+                                    <select id="poziom" name="poziom" onchange="walidujPole(this)">
+                                        <option value="">-- Najpierw wybierz język --</option>
+                                    </select>
+                                    <span class="field-error" id="err-poziom"></span>
+                                    <span class="field-ok" id="ok-poziom"><i class="fas fa-check"></i></span>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="terminLekcji">Preferowany termin zajęć</label>
+                                    <select id="terminLekcji" name="terminLekcji">
+                                        <option value="">-- Wybierz --</option>
+                                        <option value="pon-sr-pt-rano">Pon/Śr/Pt — rano (8:00–12:00)</option>
+                                        <option value="pon-sr-pt-popoł">Pon/Śr/Pt — popołudnie (14:00–18:00)</option>
+                                        <option value="wt-czw-rano">Wt/Czw — rano (8:00–12:00)</option>
+                                        <option value="wt-czw-popoł">Wt/Czw — popołudnie (14:00–18:00)</option>
+                                        <option value="sobota">Sobota (9:00–15:00)</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="rodzajKursu">Rodzaj kursu</label>
+                                    <select id="rodzajKursu" name="rodzajKursu">
+                                        <option value="grupowy">Kurs grupowy (max 6 osób)</option>
+                                        <option value="indywidualny">Kurs indywidualny (1:1)</option>
+                                        <option value="semi">Semi-prywatny (2-3 osoby)</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sekcja 3: Dane rodzica -->
+                        <div class="form-section-block" id="sekcja-rodzic">
+                            <div class="form-section-title">
+                                <span class="form-section-num">03</span>
+                                <h3>Dane rodzica / opiekuna</h3>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="imieRodzica">Imię i nazwisko <span class="required">*</span></label>
+                                    <input type="text" id="imieRodzica" name="imieRodzica" placeholder="np. Anna Kowalska" oninput="walidujPole(this)" autocomplete="off">
+                                    <span class="field-error" id="err-imieRodzica"></span>
+                                    <span class="field-ok" id="ok-imieRodzica"><i class="fas fa-check"></i></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="telefonRodzica">Telefon kontaktowy <span class="required">*</span></label>
+                                    <input type="tel" id="telefonRodzica" name="telefonRodzica" placeholder="np. 501 234 567" oninput="walidujPole(this)" autocomplete="off">
+                                    <span class="field-error" id="err-telefonRodzica"></span>
+                                    <span class="field-ok" id="ok-telefonRodzica"><i class="fas fa-check"></i></span>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group form-group-full">
+                                    <label for="emailRodzica">Adres e-mail <span class="required">*</span></label>
+                                    <input type="email" id="emailRodzica" name="emailRodzica" placeholder="np. anna.kowalska@email.com" oninput="walidujPole(this)" autocomplete="off">
+                                    <span class="field-error" id="err-emailRodzica"></span>
+                                    <span class="field-ok" id="ok-emailRodzica"><i class="fas fa-check"></i></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sekcja 4: Uwagi -->
+                        <div class="form-section-block" id="sekcja-uwagi">
+                            <div class="form-section-title">
+                                <span class="form-section-num">04</span>
+                                <h3>Dodatkowe informacje</h3>
+                            </div>
+                            <div class="form-group form-group-full">
+                                <label for="uwagi">Uwagi / pytania</label>
+                                <textarea id="uwagi" name="uwagi" rows="4" placeholder="Opisz dotychczasowe doświadczenie dziecka z językiem, specjalne potrzeby, pytania..." oninput="licznikZnakow(this)"></textarea>
+                                <span class="char-counter" id="charCounter">0 / 500 znaków</span>
+                            </div>
+                            <div class="form-group form-group-full">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="zgodaRodo" name="zgodaRodo" onchange="walidujPole(this)">
+                                    <span class="checkbox-custom"></span>
+                                    Wyrażam zgodę na przetwarzanie danych osobowych zgodnie z RODO w celu realizacji procesu rekrutacji. <span class="required">*</span>
+                                </label>
+                                <span class="field-error" id="err-zgodaRodo"></span>
+                            </div>
+                            <div class="form-group form-group-full">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="zgodaMarketing" name="zgodaMarketing">
+                                    <span class="checkbox-custom"></span>
+                                    Wyrażam zgodę na otrzymywanie informacji marketingowych drogą elektroniczną (opcjonalne).
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-submit-area">
+                            <button type="submit" class="btn btn-gold btn-lg btn-submit" id="submitBtn">
+                                <i class="fas fa-paper-plane"></i> Wyślij zgłoszenie
+                            </button>
+                            <p class="form-note">* Pola obowiązkowe. Odpowiemy w ciągu 24 godzin.</p>
+                        </div>
+
+                    </form>
+
+                    <!-- Komunikat po wysłaniu -->
+                    <div class="form-success" id="formSuccess" style="display:none;">
+                        <div class="success-icon"><i class="fas fa-check-circle"></i></div>
+                        <h2>Zgłoszenie przyjęte!</h2>
+                        <p id="successMessage"></p>
+                        <p>Nasz zespół skontaktuje się z Tobą w ciągu <strong>24 godzin</strong>.</p>
+                        <a href="index.html" class="btn btn-gold">Wróć na stronę główną</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer" id="footer">
+        <div class="footer-top">
+            <div class="container footer-grid">
+                <div class="footer-col footer-brand">
+                    <div class="footer-logo"><span class="logo-v">V</span>irella <span class="logo-school">School</span></div>
+                    <p>Ekskluzywna szkoła językowa dla dzieci i młodzieży.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Nawigacja</h4>
+                    <ul>
+                        <li><a href="index.html">Strona główna</a></li>
+                        <li><a href="gallery.html">Galeria</a></li>
+                        <li><a href="form.html">Zapisz dziecko</a></li>
+                        <li><a href="contact.html">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Partnerzy</h4>
+                    <ul>
+                        <li><a href="https://www.cambridgeenglish.org" target="_blank">Cambridge English</a></li>
+                        <li><a href="https://www.britishcouncil.org" target="_blank">British Council</a></li>
+                        <li><a href="https://www.duolingo.com" target="_blank">Duolingo</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Kontakt</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> ul. Złota 12, Warszawa</li>
+                        <li><i class="fas fa-phone"></i> +48 22 123 45 67</li>
+                        <li><i class="fas fa-envelope"></i> hello@virellaschool.pl</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 Virella School. Wszelkie prawa zastrzeżone.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

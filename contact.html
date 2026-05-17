@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt — Virella School</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ===== NAWIGACJA ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html"><span class="logo-v">V</span>irella <span class="logo-school">School</span></a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Strona główna</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="formularz.html">Zapisz dziecko</a></li>
+                <li><a href="kontakt.html" class="active">Kontakt</a></li>
+                <li class="nav-divider"></li>
+                <li><a href="https://www.cambridgeenglish.org" target="_blank" class="nav-external"><i class="fas fa-external-link-alt"></i> Cambridge</a></li>
+                <li><a href="https://www.britishcouncil.org" target="_blank" class="nav-external"><i class="fas fa-external-link-alt"></i> British Council</a></li>
+                <li><a href="https://www.duolingo.com" target="_blank" class="nav-external"><i class="fas fa-external-link-alt"></i> Duolingo</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ===== PAGE HERO ===== -->
+    <div class="page-hero">
+        <div class="page-hero-bg">
+            <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=1600&q=80" alt="Kontakt">
+            <div class="page-hero-overlay"></div>
+        </div>
+        <div class="page-hero-content">
+            <span class="section-label section-label-gold">Virella School</span>
+            <h1>Skontaktuj się z nami</h1>
+            <p>Jesteśmy do Twojej dyspozycji. Odpowiemy na każde pytanie.</p>
+        </div>
+    </div>
+
+    <!-- ===== STATUS OTWARCIA ===== -->
+    <div class="section section-light" id="status-section">
+        <div class="container">
+            <div class="open-status-banner" id="openStatusBanner">
+                <div class="status-icon" id="statusIcon"></div>
+                <div class="status-text">
+                    <strong id="statusTitle">Sprawdzamy...</strong>
+                    <span id="statusDesc"></span>
+                </div>
+                <div class="status-time" id="statusTime"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== DANE KONTAKTOWE ===== -->
+    <div class="section section-light" id="dane">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="section-header" style="text-align:left;">
+                        <span class="section-label">Dane kontaktowe</span>
+                        <h2 class="section-title">Znajdź nas</h2>
+                    </div>
+                    <div class="contact-cards">
+                        <div class="contact-card">
+                            <div class="contact-card-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="contact-card-body">
+                                <h4>Adres</h4>
+                                <p>ul. Złota 12<br>00-001 Warszawa<br>Polska</p>
+                            </div>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-card-icon"><i class="fas fa-phone-alt"></i></div>
+                            <div class="contact-card-body">
+                                <h4>Telefon</h4>
+                                <p><a href="tel:+48221234567">+48 22 123 45 67</a></p>
+                                <p><a href="tel:+48501234567">+48 501 234 567</a> (mobile)</p>
+                            </div>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-card-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="contact-card-body">
+                                <h4>E-mail</h4>
+                                <p><a href="mailto:hello@virellaschool.pl">hello@virellaschool.pl</a></p>
+                                <p><a href="mailto:rekrutacja@virellaschool.pl">rekrutacja@virellaschool.pl</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-card-icon"><i class="fas fa-clock"></i></div>
+                            <div class="contact-card-body">
+                                <h4>Godziny otwarcia</h4>
+                                <div class="hours-table" id="hoursTable">
+                                    <div class="hours-row" data-day="1"><span>Poniedziałek</span><span>8:00 – 20:00</span></div>
+                                    <div class="hours-row" data-day="2"><span>Wtorek</span><span>8:00 – 20:00</span></div>
+                                    <div class="hours-row" data-day="3"><span>Środa</span><span>8:00 – 20:00</span></div>
+                                    <div class="hours-row" data-day="4"><span>Czwartek</span><span>8:00 – 20:00</span></div>
+                                    <div class="hours-row" data-day="5"><span>Piątek</span><span>8:00 – 20:00</span></div>
+                                    <div class="hours-row" data-day="6"><span>Sobota</span><span>9:00 – 15:00</span></div>
+                                    <div class="hours-row" data-day="0"><span>Niedziela</span><span>Zamknięte</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-map">
+                    <div class="map-wrapper">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.5!2d21.0!3d52.23!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc8c92692e49%3A0xc2e97552dc0b3c5b!2sZ%C5%82ota%2C%20Warszawa!5e0!3m2!1spl!2spl!4v1700000000000!5m2!1spl!2spl"
+                            width="100%"
+                            height="450"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Mapa Virella School">
+                        </iframe>
+                    </div>
+                    <div class="map-cta">
+                        <a href="formularz.html" class="btn btn-gold">Zapisz dziecko online</a>
+                        <a href="tel:+48221234567" class="btn btn-outline-dark">Zadzwoń teraz</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== DOJAZD ===== -->
+    <div class="section section-dark" id="dojazd">
+        <div class="container">
+            <div class="section-header section-header-light">
+                <span class="section-label section-label-gold">Dojazd</span>
+                <h2 class="section-title section-title-light">Jak do nas dotrzeć</h2>
+            </div>
+            <div class="transport-grid">
+                <div class="transport-card">
+                    <div class="transport-icon"><i class="fas fa-subway"></i></div>
+                    <h4>Metro</h4>
+                    <p>Stacja <strong>Centrum</strong> (linia M1) — 3 minuty pieszo. Stacja <strong>Świętokrzyska</strong> (linia M2) — 5 minut pieszo.</p>
+                </div>
+                <div class="transport-card">
+                    <div class="transport-icon"><i class="fas fa-bus"></i></div>
+                    <h4>Autobus / Tramwaj</h4>
+                    <p>Linie autobusowe: 111, 117, 158, 520. Tramwaj: linia 7, 9, 22, 24. Przystanek <strong>Złota</strong>.</p>
+                </div>
+                <div class="transport-card">
+                    <div class="transport-icon"><i class="fas fa-car"></i></div>
+                    <h4>Samochodem</h4>
+                    <p>Parking podziemny w odległości 50m (Złote Tarasy). Strefa płatnego parkowania — strefa A.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SOCIAL MEDIA ===== -->
+    <div class="section section-light" id="social">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Obserwuj nas</span>
+                <h2 class="section-title">Bądź z nami na bieżąco</h2>
+            </div>
+            <div class="social-grid">
+                <a href="#" class="social-card social-fb">
+                    <i class="fab fa-facebook-f"></i>
+                    <span>Facebook</span>
+                    <small>@VIrellaSchool</small>
+                </a>
+                <a href="#" class="social-card social-ig">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
+                    <small>@virella.school</small>
+                </a>
+                <a href="#" class="social-card social-li">
+                    <i class="fab fa-linkedin-in"></i>
+                    <span>LinkedIn</span>
+                    <small>Virella School</small>
+                </a>
+                <a href="#" class="social-card social-yt">
+                    <i class="fab fa-youtube"></i>
+                    <span>YouTube</span>
+                    <small>Virella School PL</small>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer" id="footer">
+        <div class="footer-top">
+            <div class="container footer-grid">
+                <div class="footer-col footer-brand">
+                    <div class="footer-logo"><span class="logo-v">V</span>irella <span class="logo-school">School</span></div>
+                    <p>Ekskluzywna szkoła językowa dla dzieci i młodzieży. Prestiż, jakość, rezultaty.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Nawigacja</h4>
+                    <ul>
+                        <li><a href="index.html">Strona główna</a></li>
+                        <li><a href="galeria.html">Galeria</a></li>
+                        <li><a href="formularz.html">Zapisz dziecko</a></li>
+                        <li><a href="kontakt.html">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Partnerzy</h4>
+                    <ul>
+                        <li><a href="https://www.cambridgeenglish.org" target="_blank">Cambridge English</a></li>
+                        <li><a href="https://www.britishcouncil.org" target="_blank">British Council</a></li>
+                        <li><a href="https://www.duolingo.com" target="_blank">Duolingo</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Kontakt</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> ul. Złota 12, 00-001 Warszawa</li>
+                        <li><i class="fas fa-phone"></i> +48 22 123 45 67</li>
+                        <li><i class="fas fa-envelope"></i> hello@virellaschool.pl</li>
+                        <li><i class="fas fa-clock"></i> Pon–Pt: 8:00–20:00</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 Virella School. Wszelkie prawa zastrzeżone.</p>
+                <p>Projekt edukacyjny — strona demonstracyjna</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
