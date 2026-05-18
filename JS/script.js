@@ -2,7 +2,7 @@
 // odpala sie na kazdej stronie przez window.onload w kazdym pliku
 
 function inicjalizujNav() {
-    var navbar    = document.getElementById("navbar");
+    var navbar    = document.getElementById("navbar");  // pobieramy elementy z html
     var hamburger = document.getElementById("hamburger");
     var navLinks  = document.getElementById("navLinks");
     if (!navbar) return;
@@ -12,7 +12,7 @@ function inicjalizujNav() {
         navbar.classList[window.scrollY > 60 ? "add" : "remove"]("scrolled");
     });
 
-    if (!hamburger || !navLinks) return;
+    if (!hamburger || !navLinks) return;    // jesli nie ma ktoregos elementu no to konczymy
 
     // toggle menu po kliknieciu hamburgera
     hamburger.addEventListener("click", function() {
